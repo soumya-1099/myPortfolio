@@ -2,9 +2,14 @@
 @tailwind components;
 
 @layer base {
-.custom-h2 {
-    @apply text-6xl text-green font-bold
-  } 
+  .custom-h2 {
+    @apply text-6xl text-green font-bold;
+  }
+  .custom-shadow-teal {
+    -webkit-box-shadow: 1px 6px 5px 0px rgba(66, 182, 212, 0.14);
+    -moz-box-shadow: 1px 6px 5px 0px rgba(66, 182, 212, 0.14);
+    box-shadow: 1px 6px 5px 0px rgba(66, 182, 212, 0.14);
+  }
 }
 
 @tailwind utilities;

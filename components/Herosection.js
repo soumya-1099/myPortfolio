@@ -11,7 +11,7 @@ import launchIcon from "../images/launch.svg";
 
 const Herosection = () => {
   return (
-    <section className="max-w-990 mx-auto relative justify-between w-full	h-screen bg-cover bg-center flex items-center sm:px-4 sm:flex-col sm:mt-28">
+    <section className="max-w-990 mx-auto relative justify-between w-full	h-screen sm:h-44 bg-cover bg-center flex items-center sm:px-4 sm:flex-col sm:mt-28">
       <div>
         <h1 className="text-5xl font-extrabold leading-tight mb-4 sm:text-3xl ">
           Hey there! I am
