@@ -11,12 +11,18 @@ module.exports = {
   theme: {
     colors: {
       green: "#008080",
-      grey: "#3a3a3a",
+      gray: "#9ca3af",
       footer: "#001A1A",
       white: "#ffffff",
       black: "#000000",
       teal: "#0d9488",
-      red: '#E86441'
+      red: '#E86441',
+      orange: '#f97316',
+      blue:'#3b82f6',
+      yellow:'#eab308',
+      navyBlue:'#2563eb',
+      skyBlue:'#38bdf8',
+
     },
     screens: {
       'sm': {'min': '320px', 'max': '600px'},

@@ -22,11 +22,11 @@ const Contact = () => {
   console.log(errors);
 
   return (
-    <div className="my-14 sm:mt-8  ">
+    <div className="py-24 sm:py-4 md:pt-4" id="contact">
       <div name="experience" className="w-[1024px] max-w-full mx-auto ">
         <div className="mx-auto p-4 flex flex-col justify-center">
           <div>
-            <p className="text-4xl text-green font-bold border-b-4 border-gray-500 p-2 inline">
+            <p className="text-4xl text-green font-bold border-b-4 border-gray-500 p-2 inline sm:text-3xl">
               Contact
             </p>
             <p className="py-6 sm:pb-5">
@@ -37,7 +37,7 @@ const Contact = () => {
           <div className="flex justify-center items-center">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col w-1/2 md:w-1/2 sm:w-full"
+              className="flex flex-col w-1/2 md:w-full sm:w-full"
             >
               <div className="flex flex-col p-4">
                 <label htmlFor="name">Full Name</label>
@@ -54,7 +54,7 @@ const Contact = () => {
                   <p className="text-red">{errors.name}</p>
                 ) : null}
               </div>
-              <div className="flex flex-col p-4">
+              {/* <div className="flex flex-col p-4">
                 <label htmlFor="number">Phone Number</label>
                 <input
                   type="number"
@@ -68,7 +68,7 @@ const Contact = () => {
                 {errors.phone && touched.phone ? (
                   <p className="text-red">{errors.phone}</p>
                 ) : null}
-              </div>
+              </div> */}
               <div className="flex flex-col p-4">
                 <label htmlFor="email">Email ID</label>
                 <input

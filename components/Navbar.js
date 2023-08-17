@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import hamburgerIcon from "../images/hamburgerMenu.svg";
 import Image from "next/image";
+
 const Navbar = () => {
   const [state, setState] = React.useState({
     right: false,
@@ -20,6 +21,16 @@ const Navbar = () => {
 
   const toggleDrawer = (anchor, open) => (event) => {
     setState({ ...state, [anchor]: open });
+  };
+
+  const handleNavLink = (e, targetId) => {
+    e.preventDefault();
+    console.log(targetId);
+
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const list = (anchor) => (
@@ -65,28 +76,39 @@ const Navbar = () => {
         <nav className="sm:hidden">
           <Link
             href="/"
-            className="inline-block text-lg text-grey font-medium ml-8 hover:text-green hover:underline "
+            className="inline-block text-lg md:text-base text-black font-medium ml-8 hover:text-green hover:underline "
           >
             Home
           </Link>
 
           <Link
-            href="/about"
-            className="inline-block text-lg text-grey font-medium ml-8 hover:text-green hover:underline"
+            href="#about"
+            onClick={(e) => handleNavLink(e, "about")}
+            className="inline-block text-lg md:text-base text-black font-medium ml-8 hover:text-green hover:underline"
           >
             About
           </Link>
 
           <Link
-            href="/projects"
-            className="inline-block text-lg text-grey font-medium ml-8 hover:text-green hover:underline"
+            href="#projects"
+            onClick={(e) => handleNavLink(e, "projects")}
+            className="inline-block text-lg md:text-base text-black font-medium ml-8 hover:text-green hover:underline"
           >
             Projects
           </Link>
 
           <Link
-            href="/contact"
-            className="inline-block text-lg text-grey font-medium ml-8 hover:text-green hover:underline "
+            href="#projects"
+            onClick={(e) => handleNavLink(e, "skills")}
+            className="inline-block text-lg md:text-base text-black font-medium ml-8 hover:text-green hover:underline"
+          >
+            Skills
+          </Link>
+
+          <Link
+            href="#contact"
+            onClick={(e) => handleNavLink(e, "contact")}
+            className="inline-block text-lg md:text-base text-black font-medium ml-8 hover:text-green hover:underline "
           >
             Contact
           </Link>
