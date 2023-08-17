@@ -2,10 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="my-8 sm:mt-32  ">
+    <div className="pt-24 sm:pt-16 md:pb-24 " id="about">
       <section className="w-[1024px] max-w-full flex flex-col mx-auto px-4">
       <div className="pb-8">
-      <p className="text-4xl text-green font-bold inline border-b-4 border-gray-500">
+      <p className="text-4xl text-green font-bold inline border-b-4 border-gray-500 sm:text-3xl">
         About 
       </p>
     

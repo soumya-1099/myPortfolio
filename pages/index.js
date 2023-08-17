@@ -2,7 +2,7 @@ import Herosection from 'components/Herosection'
 import React from 'react'
 import About from 'components/About'
 import Projects from 'components/Projects'
-import Experience from 'components/Experience'
+import Skills from 'components/Skills'
 import Contact from 'components/Contact'
 
 const index = () => {
@@ -11,7 +11,7 @@ const index = () => {
       <Herosection/>
       <About/>
       <Projects/>
-      <Experience/>
+      <Skills/>
       <Contact/>
     </div>
   )

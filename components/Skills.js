@@ -9,31 +9,31 @@ import github from "../images/github.png";
 import tailwind from "../images/tailwind.png";
 import Image from "next/image";
 
-const Experience = () => {
+const Skills = () => {
   const techs = [
     {
       id: 1,
       src: html,
       title: "HTML",
-      style: "shadow-orange-500",
+      style: "shadow-orange",
     },
     {
       id: 2,
       src: css,
       title: "CSS",
-      style: "shadow-blue-500",
+      style: "shadow-blue",
     },
     {
       id: 3,
       src: javascript,
       title: "JavaScript",
-      style: "shadow-yellow-500",
+      style: "shadow-yellow",
     },
     {
       id: 4,
       src: reactImage,
       title: "React",
-      style: "shadow-blue-600",
+      style: "shadow-navyBlue",
     },
     {
       id: 5,
@@ -45,24 +45,24 @@ const Experience = () => {
       id: 6,
       src: tailwind,
       title: "Tailwind",
-      style: "shadow-sky-400",
+      style: "shadow-skyBlue",
     },
 
     {
       id: 7,
       src: github,
       title: "GitHub",
-      style: "shadow-gray-400",
+      style: "shadow-gray",
     },
   ];
 
   return (
-    <div className="my-14 sm:mt-8  ">
+    <div className="py-24 sm:py-4 md:pb-4" id='skills' >
       <div name="experience" className="w-[1024px] max-w-full mx-auto ">
         <div className="mx-auto p-4 flex flex-col justify-center">
           <div>
-            <p className="text-4xl text-green font-bold border-b-4 border-gray-500 p-2 inline">
-              Experience
+            <p className="text-4xl text-green font-bold border-b-4 border-gray-500 p-2 inline sm:text-3xl">
+              Skills
             </p>
             <p className="py-6 sm:pb-5">
               These are the technologies I&apos;ve worked with.
@@ -86,4 +86,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;
