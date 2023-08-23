@@ -1,25 +1,52 @@
 import React from "react";
 import { useFormik } from "formik";
 import { contactSchema } from "schemas";
+import { object } from "yup";
 
 const initialValues = {
   name: "",
-  phone: "",
+  // phone: "",
   email: "",
   message: "",
 };
 
 const Contact = () => {
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: contactSchema,
-      onSubmit: (values, action) => {
-        console.log(values);
-        action.resetForm();
-      },
-    });
-  console.log(errors);
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    isValid,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: contactSchema,
+    onSubmit: async (values, action) => {
+      const body = new FormData();
+      Object.entries(values).forEach(([key, val]) => {
+        body.append(key, val);
+      });
+
+      const res = await fetch(
+        "https://getform.io/f/966e435f-4c9d-4967-9ea1-fc57cf17dcfd",
+        {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+          },
+          body,
+        }
+      );
+
+      if (!res.ok) {
+        console.error(res.status, await res.text());
+      } else {
+        console.log(await res.json());
+      }
+      action.resetForm();
+    },
+  });
 
   return (
     <div className="py-24 sm:py-4 md:pt-4" id="contact">
@@ -104,7 +131,14 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className=" bg-teal text-white hover:bg-teal font-semibold hover:text-white border border-teal hover:border-transparent px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+                disabled={!isValid}
+                className={`bg-${
+                  isValid ? "teal" : "teal"
+                } text-white font-semibold border border-${
+                  isValid ? "teal" : "teal"
+                } border-gray px-6 py-3 my-8 mx-auto flex items-center rounded-md duration-300 ${
+                  isValid ? "cursor-pointer" : "cursor-not-allowed"
+                }`}
               >
                 Let&apos;s talk!
               </button>
