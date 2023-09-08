@@ -133,9 +133,9 @@ const Contact = () => {
                 type="submit"
                 disabled={!isValid}
                 className={`bg-${
-                  isValid ? "teal" : "teal"
+                  isValid ? "green" : "green"
                 } text-white font-semibold border border-${
-                  isValid ? "teal" : "teal"
+                  isValid ? "green" : "green"
                 } border-gray px-6 py-3 my-8 mx-auto flex items-center rounded-md duration-300 ${
                   isValid ? "cursor-pointer" : "cursor-not-allowed"
                 }`}

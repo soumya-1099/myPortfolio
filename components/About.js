@@ -4,12 +4,11 @@ const About = () => {
   return (
     <div className="pt-24 sm:pt-16 md:pb-24 " id="about">
       <section className="w-[1024px] max-w-full flex flex-col mx-auto px-4">
-      <div className="pb-8">
-      <p className="text-4xl text-green font-bold inline border-b-4 border-gray-500 sm:text-3xl">
-        About 
-      </p>
-    
-    </div>
+        <div className="pb-8">
+          <p className="text-4xl text-green font-bold inline border-b-4 border-gray-500 sm:text-3xl">
+            About
+          </p>
+        </div>
         <div>
           <p className="mb-4 text-lg font-normal sm:text-base">
             I am Soumya U. Experienced Software Engineer with 2 years of working
@@ -21,9 +20,16 @@ const About = () => {
             that makes the internet tick.
           </p>
           <p className="mb-4 text-lg font-normal sm:text-base">
-            My previous work experience includes a full time engineering role at
-            Proactive For Her and Rayabhari Technologies respectively. My web
-            development roots are in Javascript, ReactJs & NextJs.
+            My previous work experience includes a full time engineering role
+            at&nbsp;
+            <span className="text-teal font-medium">
+              Proactive For Her
+            </span> and{" "}
+            <span className="text-teal font-medium">
+              Rayabhari Technologies{" "}
+            </span>{" "}
+            respectively. My web development roots are in Javascript, ReactJs &
+            NextJs.
           </p>
 
           <p className="mb-4 text-lg font-normal sm:text-base">
