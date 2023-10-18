@@ -24,12 +24,18 @@ const Projects = () => {
         <div className="grid grid-cols-2 sm:grid-cols-1 gap-8 px-4 md:px-0">
           {projectData.map(({ id, src, projectLink }) => (
             <div key={id} className="custom-shadow-teal rounded-lg">
-              <Image
-                src={src}
-                alt="projectDisplay"
-                className="rounded-md duration-200 hover:scale-105"
-              />
-              <div className="flex items-center justify-center space-x-4">
+              <Link
+                className="px-6 py-3 duration-200 hover:scale-105 hover:text-teal"
+                href={projectLink}
+                target="_blank"
+              >
+                <Image
+                  src={src}
+                  alt="projectDisplay"
+                  className="rounded-md duration-200 hover:scale-105"
+                />
+              </Link>
+              {/* <div className="flex items-center justify-center space-x-4">
                 {projectLink ? ( 
                   <Link
                     className="px-6 py-3 duration-200 hover:scale-105 hover:text-teal"
@@ -41,7 +47,7 @@ const Projects = () => {
                 ) : (
                   <span>Link not available</span>
                 )}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

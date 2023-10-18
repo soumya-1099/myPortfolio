@@ -6,6 +6,7 @@ export default function Document() {
       <Head />
       <title>Soumya U | Portfolio</title>
       <meta property="og:title" content="Soumya's Portfolio" key="title" />
+      <link rel="icon" href="/favicon.ico" />
       <body>
         <Main />
         <NextScript />

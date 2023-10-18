@@ -4,7 +4,7 @@ import avatar from "../images/avatar.png";
 import {
   UilLinkedin,
   UilGithub,
-  UilEnvelopeAlt,
+  UilFileAlt
 } from "@iconscout/react-unicons";
 import Link from "next/link";
 import launchIcon from "../images/launch.svg";
@@ -48,14 +48,13 @@ const Herosection = () => {
             <UilGithub />
             &nbsp; GitHub
           </Link>
-          <Link
+          <a
             className="flex p-2 rounded hover:text-white hover:bg-green cursor-pointer sm:text-base sm:p-1"
-            href="mailto: soumyagoda1004@gmail.com"
-            target="_blank"
+            href="/soumyaSDE1.pdf" download="soumyaU.pdf"
           >
-            <UilEnvelopeAlt />
-            &nbsp; Email
-          </Link>
+            <UilFileAlt />
+            &nbsp; Resume
+          </a>
         </div>
       </div>
       <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-2xl w-80 h-80 mt-0 overflow-hidden sm:hidden">

@@ -6,9 +6,9 @@
     @apply text-6xl text-green font-bold;
   }
   .custom-shadow-teal {
-    -webkit-box-shadow: 1px 6px 5px 0px rgba(66, 182, 212, 0.14);
-    -moz-box-shadow: 1px 6px 5px 0px rgba(66, 182, 212, 0.14);
-    box-shadow: 1px 6px 5px 0px rgba(66, 182, 212, 0.14);
+    -webkit-box-shadow: -2px 9px 9px -6px rgba(16, 128, 128, 0.88);
+    -moz-box-shadow: -2px 9px 9px -6px rgba(16, 128, 128, 0.88);
+    box-shadow: -2px 9px 9px -6px rgba(16, 128, 128, 0.88);
   }
 }
 

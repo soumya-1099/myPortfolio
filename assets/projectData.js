@@ -7,7 +7,7 @@ export const projectData = [
   {
     id: 2,
     src: require("../images/wyseWebApp.png"),
-    projectLink: "https://wyseitsolutions.com",
+    projectLink: "https://wyse-solutions.vercel.app/",
   },
   {
     id: 3,
